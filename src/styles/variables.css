@@ -1,0 +1,51 @@
+:root {
+  /*FONT-FAMILY/WEIGHT VARIABLES */
+  --main-font-regular: "Poppins Regular", Arial, sans-serif, Helvetica;
+  --main-font-light: "Poppins Light", Arial, sans-serif, Helvetica;
+  --main-font-extraLight: "Poppins ExtraLigth", Arial, sans-serif, Helvetica;
+  --main-font-medium: "Poppins Medium", Arial, sans-serif, Helvetica;
+  --main-font-bold: "Poppins Bold", Arial, sans-serif, Helvetica;
+  --main-font-regular-secondOption: "Lato Regular", Arial, sans-serif, Helvetica;
+  --main-font-light-secondOption: "Lato Light", Arial, sans-serif, Helvetica;
+  --main-font-bold-secondOption: "Lato Bold", Arial, sans-serif, Helvetica;
+
+  /* FONT-HEIGHT VARIABLES*/
+  --font-height-auto: auto;
+  --font-height-none: 0px;
+  --font-height-xs: 18px;
+  --font-height-s: 20px;
+  --font-height-m: 24px;
+  --font-height-l: 32px;
+  --font-height-xl: 80px;
+
+  /* FONT-SIZE VARIABLES*/
+  --font-size-xxs: 0.75rem;
+  --font-size-xs: 0.875rem;
+  --font-size-s: 1rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 1.75rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.625rem;
+  --font-size-xxxl: 3.625rem;
+  --font-size-xxxxl: 4rem;
+
+  /* DEFAULT BORDER VARIABLES*/
+  --border-none: 0px;
+  --border-xs: 0.5px solid;
+  --border-s: 1px solid;
+  --border-m: 2px solid;
+  --border-l: 4px solid;
+
+  /* DEFAULT SPACING VARIABLES*/
+  --spacing-none: 0px;
+  --spacing-xxxs: 4px;
+  --spacing-xxs: 8px;
+  --spacing-xs: 12px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 56px;
+  --spacing-xxxxl: 64px;
+}

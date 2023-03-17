@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins ExtraLigth";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-ExtraLight.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/public/assets/fonts/Poppins-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/public/assets/fonts/Lato-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Lato Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/public/assets/fonts/Lato-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/public/assets/fonts/Lato-Bold.ttf") format("ttf");
+}
