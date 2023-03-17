@@ -1,7 +1,12 @@
-import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router/app-router';
 
 function App() {
-  return <h1 className="App">Welcome to Hypocat</h1>;
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
