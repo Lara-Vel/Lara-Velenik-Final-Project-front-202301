@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
 import { getNewUserTokenAsync, selectAuthSlice } from '../../user-slice';
 import { ErrorStyled, LoginFormStyled, SuccesStyled } from './LoginFormStyled';
 import * as FaIcons from 'react-icons/fa';
+import { Navigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
@@ -12,9 +13,12 @@ const LoginForm = () => {
     switch (loginStatus) {
       case 'success':
         return (
-          <SuccesStyled>
-            Acceso correcto <FaIcons.FaRegCheckCircle />
-          </SuccesStyled>
+          <>
+            <SuccesStyled>
+              Acceso correcto <FaIcons.FaRegCheckCircle />
+            </SuccesStyled>
+            <Navigate to={'/app'} />
+          </>
         );
       case 'error':
         return (

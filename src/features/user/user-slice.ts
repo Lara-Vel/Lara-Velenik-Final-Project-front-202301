@@ -46,7 +46,7 @@ export const userSlice = createSlice({
           state.status = 'idle';
           state.loginStatus = 'success';
           state.loginMessage = action.payload.message;
-          sessionStorage.setItem('Bearer', action.payload.accessToken);
+          sessionStorage.setItem('accessToken', action.payload.accessToken);
         },
       )
       .addCase(getNewUserTokenAsync.rejected, (state, action: any) => {
