@@ -1,9 +1,9 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from '../../../../app/store';
+import { screen, waitFor } from '@testing-library/react';
 import LoginForm from './LoginForm';
 import { server } from '../../../../mocks/server';
 import userEvent from '@testing-library/user-event';
+import { renderWithProviders } from '../../../../mocks/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
@@ -11,10 +11,10 @@ afterAll(() => server.close());
 
 describe('Given a login form component', () => {
   test('When a user tries to login with a valid email and password, then he should receive his access token', async () => {
-    render(
-      <Provider store={store}>
+    renderWithProviders(
+      <MemoryRouter>
         <LoginForm />
-      </Provider>,
+      </MemoryRouter>,
     );
 
     await userEvent.type(
@@ -34,10 +34,10 @@ describe('Given a login form component', () => {
   });
 
   test('When there is an error while logging in, then the user should receive an error message as feedback', async () => {
-    render(
-      <Provider store={store}>
+    renderWithProviders(
+      <MemoryRouter>
         <LoginForm />
-      </Provider>,
+      </MemoryRouter>,
     );
 
     await userEvent.type(

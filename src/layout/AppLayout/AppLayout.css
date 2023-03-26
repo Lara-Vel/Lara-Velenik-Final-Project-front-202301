@@ -1,4 +1,5 @@
 .app-container {
+  font-family: var(--main-font-regular);
   max-width: 1440px;
   margin: 0 auto;
 }
