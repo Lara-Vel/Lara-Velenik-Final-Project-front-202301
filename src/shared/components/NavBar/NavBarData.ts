@@ -1,12 +1,12 @@
 export const SidebarData = [
   {
     title: 'Inicio',
-    path: '/home',
+    path: '/app',
     cName: 'nav-text',
   },
   {
     title: 'Anúnciate',
-    path: '/anunciate',
+    path: '/app/create-ad',
     cName: 'nav-text',
   },
 ];

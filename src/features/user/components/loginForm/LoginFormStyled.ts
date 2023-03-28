@@ -116,6 +116,7 @@ export const LoginFormStyled = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    height: 60px;
   }
 `;
 

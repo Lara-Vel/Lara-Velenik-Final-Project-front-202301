@@ -19,7 +19,8 @@ export const NavMenu = styled.nav`
   font-family: var(--main-font-regular);
   font-size: 1.3rem;
   position: fixed;
-
+  background-image: url('../assets/images/Visiwig-Grid.svg');
+  top: 0;
   @media screen and (max-width: 426px) {
     width: 100%;
     height: 22%;
@@ -36,7 +37,7 @@ export const NavMenu = styled.nav`
 `;
 
 export const NavMenuLogo = styled.div`
-  width: 142px;
+  width: 125px;
   justify-content: flex-start;
   display: flex;
   border-radius: 88px;
@@ -49,7 +50,7 @@ export const NavMenuLogo = styled.div`
   }
 
   @media (max-width: 426px) {
-    width: 40%;
+    width: 37%;
 
     &.active {
       width: 64%;
