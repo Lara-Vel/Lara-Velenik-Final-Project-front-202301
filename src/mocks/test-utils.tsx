@@ -21,6 +21,8 @@ export const renderWithProviders = (
       adsReducer: {
         ads: [],
         status: 'idle',
+        adStatus: 'idle',
+        createAdStatus: 'notUsed',
         responseMessage: '',
       },
     },
