@@ -45,11 +45,12 @@
   align-items: center;
   height: 350px;
   color: #232323;
+  margin-top: -20px;
 }
 
 .article-text {
   flex: 1;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: var(--main-font-regular);
   padding-right: 50px;
 }
@@ -68,11 +69,11 @@
 @media (max-width: 376px) {
   .home-container {
     padding: 30px;
-    padding-top: 50px;
+    padding-top: 38px;
   }
   .home-container h1 {
     font-size: 1rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 2.7rem;
   }
 
   .article-container {
