@@ -6,11 +6,13 @@ import DetailAd from '../pages/detailAd/DetailAd';
 
 import Home from '../pages/home/Home';
 import Login from '../pages/login/Login';
+import NotFound from '../pages/notFound/NotFound';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: '',
@@ -21,6 +23,7 @@ export const router = createBrowserRouter([
   {
     path: '/app',
     element: <AppLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: '',
