@@ -23,7 +23,7 @@ const CardList = () => {
             <TitleCardStyled>Anuncios</TitleCardStyled>
             <CardListStyled>
               {ads.map(ad => (
-                <CardStyled key={ad.breed}>
+                <CardStyled key={ad._id}>
                   <Card ad={ad}></Card>
                 </CardStyled>
               ))}
