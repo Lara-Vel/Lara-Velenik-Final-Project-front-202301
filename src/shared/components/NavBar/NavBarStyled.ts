@@ -19,7 +19,7 @@ export const NavMenu = styled.nav`
   font-family: var(--main-font-regular);
   font-size: 1.3rem;
   position: fixed;
-  background-image: url('../assets/images/Visiwig-Grid.svg');
+  background-image: url('/assets/images/Visiwig-Grid.svg');
   top: 0;
   @media screen and (max-width: 426px) {
     width: 100%;

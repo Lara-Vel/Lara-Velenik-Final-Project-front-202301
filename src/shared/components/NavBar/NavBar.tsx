@@ -24,7 +24,7 @@ const NavBar = () => {
           <NavMenuLogo
             className={sidebar ? 'nav-menu__logo active' : 'nav-menu__logo'}
           >
-            <img src="../assets/images/logo-home.webp" alt="Hypocat logo" />
+            <img src="/assets/images/logo-home.webp" alt="Hypocat logo" />
           </NavMenuLogo>
           <NavMenuItems
             className={sidebar ? 'nav-menu__items active' : 'nav-menu__items'}
