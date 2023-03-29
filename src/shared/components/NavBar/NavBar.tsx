@@ -54,6 +54,7 @@ const NavBar = () => {
                   style={{
                     color: 'black',
                   }}
+                  title="hamburguer-menu"
                 />
               </Link>
             </NavMenuToggle>

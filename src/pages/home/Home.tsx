@@ -48,6 +48,7 @@ const Home = () => {
               style={{
                 color: 'black',
               }}
+              title="github"
             />
           </Link>
           <Link
@@ -59,6 +60,7 @@ const Home = () => {
               style={{
                 color: 'black',
               }}
+              title="linkedin"
             />
           </Link>
         </div>
