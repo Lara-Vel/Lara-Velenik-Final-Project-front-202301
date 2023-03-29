@@ -4,7 +4,6 @@ export const NavContainer = styled.div`
   height: 140px;
   z-index: 100;
   position: sticky;
-  padding-top: 33px;
 `;
 
 export const NavMenu = styled.nav`
@@ -12,9 +11,8 @@ export const NavMenu = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   width: 100%;
-  height: 15%;
+  height: 17%;
   padding: 2% 5%;
   font-family: var(--main-font-regular);
   font-size: 1.3rem;
@@ -22,13 +20,8 @@ export const NavMenu = styled.nav`
   background-image: url('/assets/images/Visiwig-Grid.svg');
   top: 0;
   @media screen and (max-width: 426px) {
+    height: 16%;
     width: 100%;
-    height: 22%;
-    display: flex;
-    padding: 0 1rem;
-    justify-content: space-between;
-    gap: 6rem;
-
     &.active {
       right: 0;
       transition: 350ms;
@@ -50,7 +43,7 @@ export const NavMenuLogo = styled.div`
   }
 
   @media (max-width: 426px) {
-    width: 37%;
+    width: 30%;
 
     &.active {
       width: 64%;
