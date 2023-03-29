@@ -115,12 +115,11 @@ const CreateAdForm = () => {
         </div>
 
         <label className="ad-img">
-          <span>Sube una foto</span>
           <img
             src={image === '' ? '../assets/images/camera.png' : image}
             alt="Insertar imagen"
           />
-
+          <span>Sube una foto</span>
           <input
             data-testid="File"
             name="cat-ad"

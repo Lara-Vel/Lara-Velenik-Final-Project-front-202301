@@ -11,8 +11,9 @@ export const CreateFormStyled = styled.form`
   padding-top: 60px;
   margin: 5rem auto;
   @media screen and (max-width: 376px) {
-    padding: 25px 40px 0 55px;
+    padding: 100px 30px 0 30px;
     margin: 0;
+    width: 482px;
   }
 
   .flex-container {
@@ -20,12 +21,12 @@ export const CreateFormStyled = styled.form`
     margin-top: 4rem;
     width: 100%;
     gap: 2.5rem;
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
     @media screen and (max-width: 376px) {
       margin-top: 1.5rem;
       flex-direction: column;
-      margin-bottom: 21rem;
-      gap: 2.5rem;
+      margin-bottom: 4rem;
+      gap: 0;
     }
   }
 
@@ -35,12 +36,13 @@ export const CreateFormStyled = styled.form`
     font-size: 1.3rem;
     @media screen and (max-width: 376px) {
       font-size: 1.1rem;
+      padding-bottom: 1rem;
     }
   }
 
   div {
     width: 33%;
-    height: 2rem;
+    min-height: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -49,9 +51,8 @@ export const CreateFormStyled = styled.form`
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 376px) {
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 61px;
+      gap: 20px;
+      width: 100%;
     }
   }
 
@@ -109,14 +110,13 @@ export const CreateFormStyled = styled.form`
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 376px) {
-      gap: 8px;
-      display: flex;
-      flex-direction: column;
+      gap: 20px;
+      width: 100%;
     }
   }
 
   .button-save {
-    height: 10%;
+    width: 33%;
     padding: 8px;
     background: #627abd;
     color: white;
@@ -124,7 +124,11 @@ export const CreateFormStyled = styled.form`
     border-radius: 5px;
     font-weight: 700;
     border: none;
-    width: 33%;
+
+    @media screen and (max-width: 376px) {
+      width: 100%;
+      padding: 8px;
+    }
   }
 
   .flex-container .ad-img {
@@ -133,21 +137,21 @@ export const CreateFormStyled = styled.form`
     border-radius: var(--radius-m);
     position: relative;
     margin-bottom: 1rem;
-    margin-left: 65px;
     margin-top: 15px;
+    text-align: center;
     @media screen and (max-width: 376px) {
-      width: 60px;
-      height: 60px;
-      margin-left: 103px;
-      margin-top: 48px;
-      margin-bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 55px;
+      margin-bottom: 0rem;
     }
 
     span {
       font-family: var(--main-font-regular);
       font-size: 0.8rem;
       width: 100%;
-      width: 60px;
       text-align: center;
       position: absolute;
       left: 50%;
@@ -155,18 +159,15 @@ export const CreateFormStyled = styled.form`
       transform: translate(-50%, 0%);
       @media screen and (max-width: 376px) {
         width: 85px;
+        bottom: -5px;
       }
     }
 
     input {
-      visibility: hidden;
+      display: none;
     }
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-m);
-      border: none;
+      width: 64px;
     }
   }
 `;

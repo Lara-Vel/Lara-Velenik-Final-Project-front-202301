@@ -9,6 +9,7 @@ export const CardListStyled = styled.ul`
   gap: 80px;
   margin: 0 auto;
   padding-bottom: 50px;
+  padding-top: 20px;
 `;
 
 export const CardStyled = styled.li`
@@ -35,6 +36,6 @@ export const TitleCardStyled = styled.p`
     font-family: var(--main-font-regular);
     font-weight: 700;
     font-size: 1rem;
-    padding-top: 40px;
+    padding-top: 145px;
   }
 `;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardList from '../../features/ads/components/cardList/CardList';
-import * as FaGithub from 'react-icons/fa';
-import * as FaLinkedin from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -45,7 +44,7 @@ const Home = () => {
             target={'_blank'}
             rel="noreferrer"
           >
-            <FaGithub.FaGithub
+            <FaGithub
               style={{
                 color: 'black',
               }}
@@ -56,7 +55,7 @@ const Home = () => {
             target={'_blank'}
             rel="noreferrer"
           >
-            <FaLinkedin.FaLinkedin
+            <FaLinkedin
               style={{
                 color: 'black',
               }}

@@ -37,12 +37,14 @@
   font-size: 1.7rem;
   font-family: var(--main-font-regular);
   color: #232323;
+  padding-bottom: 20px;
 }
 
 .article-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  line-height: 1.9rem;
   height: 350px;
   color: #232323;
   margin-top: -20px;
@@ -62,25 +64,23 @@
 
 .image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 376px) {
   .home-container {
-    padding: 30px;
-    padding-top: 38px;
+    padding: 38px;
   }
   .home-container h1 {
     font-size: 1rem;
-    margin-bottom: 2.7rem;
+    margin-bottom: 1.5rem;
   }
 
   .article-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    height: 500px;
+    line-height: 1.2rem;
   }
 
   .article-text {
@@ -92,7 +92,11 @@
 
   .image {
     width: 200px;
-    height: 200px;
+    height: 260px;
+  }
+
+  .image img {
+    width: 90%;
   }
 
   .footer-container {

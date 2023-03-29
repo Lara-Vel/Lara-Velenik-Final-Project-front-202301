@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { Ad } from '../../models/ads-model';
 import { createNewAd, getAdById, getAllAds } from './ad-api';
-import { DetailAd } from '../../models/ads-model';
+import { DetailAd, Ad } from '../../models/ads-model';
 
 export type AdStatus = 'idle' | 'success' | 'error';
 
