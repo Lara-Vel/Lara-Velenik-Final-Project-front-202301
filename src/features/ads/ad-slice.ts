@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { Ad } from '../../models/ads-model';
-import { createNewAd, getAllAds } from './ad-api';
+import { createNewAd, getAdById, getAllAds } from './ad-api';
+import { DetailAd } from '../../models/ads-model';
 
 export type AdStatus = 'idle' | 'success' | 'error';
 
@@ -19,6 +20,7 @@ export interface CreateAdResponse {
 
 export interface Adstate {
   ads: Ad[];
+  ad: DetailAd;
   status: AdStatus;
   adStatus: NewAdStatus;
   createAdStatus: NewAdStatus;
@@ -27,6 +29,17 @@ export interface Adstate {
 
 const initialState: Adstate = {
   ads: [],
+  ad: {
+    _id: '',
+    breed: '',
+    name: '',
+    surname: '',
+    email: '',
+    phone: '',
+    city: '',
+    image: '',
+    description: '',
+  },
   status: 'idle',
   adStatus: 'notUsed',
   createAdStatus: 'notUsed',
@@ -51,9 +64,18 @@ export const createAdAsync = createAsyncThunk(
 
     return {
       message: 'ok',
-      ads: { breed: '', city: '', image: '' },
+      ads: { _id: '', breed: '', city: '', image: '' },
       apiResponse,
     } as CreateAdResponse;
+  },
+);
+
+export const getAdByIdsAsync = createAsyncThunk(
+  'ads/getAdByIdAsync',
+  async (id: string) => {
+    const apiResponse = await getAdById(id);
+
+    return apiResponse;
   },
 );
 
@@ -97,6 +119,18 @@ export const adsSlice = createSlice({
       state.status = 'error';
       state.createAdStatus = 'error';
       state.responseMessage = action.error.message;
+    });
+    builder.addCase(getAdByIdsAsync.pending, state => {
+      state.status = 'idle';
+    });
+
+    builder.addCase(getAdByIdsAsync.fulfilled, (state, action) => {
+      state.status = 'success';
+      state.ad = action.payload as DetailAd;
+    });
+
+    builder.addCase(getAdByIdsAsync.rejected, (state, action) => {
+      state.status = 'error';
     });
   },
 });
