@@ -36,6 +36,6 @@ export const TitleCardStyled = styled.p`
     font-family: var(--main-font-regular);
     font-weight: 700;
     font-size: 1rem;
-    padding-top: 145px;
+    padding-top: 180px;
   }
 `;
