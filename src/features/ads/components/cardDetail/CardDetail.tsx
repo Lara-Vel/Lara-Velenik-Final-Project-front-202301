@@ -48,7 +48,6 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
       case 'error':
         return <p data-testid="error-msg">{'El anuncio buscado no existe'}</p>;
       default:
-        console.log('estoy en default card detail', ad);
         return (
           <>
             <DetailContainer className="detail-container">
