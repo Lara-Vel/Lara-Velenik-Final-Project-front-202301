@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CreateFormStyled = styled.form`
   padding: 0 1rem;
   gap: 1.5rem;
-  width: 900px;
+  max-width: 900px;
   align-items: center;
   justify-content: center;
   color: #7f7e84;
@@ -11,9 +11,8 @@ export const CreateFormStyled = styled.form`
   padding-top: 60px;
   margin: 5rem auto;
   @media screen and (max-width: 376px) {
-    padding: 100px 30px 0 30px;
+    padding: 10px 30px 0 30px;
     margin: 0;
-    width: 482px;
   }
 
   .flex-container {
