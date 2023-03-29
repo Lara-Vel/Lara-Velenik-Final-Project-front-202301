@@ -19,7 +19,9 @@ describe('Given a CardDetail component', () => {
         </MemoryRouter>,
       );
 
-      const description = await screen.findByText(/Soy un gato Azul Ruso/i);
+      const description = await screen.findByText(
+        /Tranquilo, dócil y cariñoso. Tímido con los desconocidos. Casero, aunque a veces se escapa.Vivaz y despierto/i,
+      );
       await expect(description).toBeInTheDocument();
     });
   });
@@ -32,7 +34,9 @@ describe('Given a CardDetail component', () => {
       </MemoryRouter>,
     );
 
-    const description = await screen.findByText(/Soy un gato Balinés/i);
+    const description = await screen.findByText(
+      /Viváz e inteligente. Juguetón, maullador. Fiel, no le gusta la soledad. Exigente, le gusta llamar la atención/i,
+    );
     await expect(description).toBeInTheDocument();
   });
 });
@@ -46,7 +50,9 @@ test('Then it should show the third card description', async () => {
     </MemoryRouter>,
   );
 
-  const description = await screen.findByText(/Soy un gato Bengalí/i);
+  const description = await screen.findByText(
+    /Independiente, poco mimoso. Juguetón y curioso. Deportista, ágil y buen cazador./i,
+  );
   await expect(description).toBeInTheDocument();
 });
 
@@ -59,7 +65,9 @@ test('Then it should show the fourth card description', async () => {
     </MemoryRouter>,
   );
 
-  const description = await screen.findByText(/Soy un gato Bosque de Noruega/i);
+  const description = await screen.findByText(
+    /Sociable pero independiente. Juguetón, curioso y audáz. Cazador hábil./i,
+  );
   await expect(description).toBeInTheDocument();
 });
 
@@ -72,7 +80,9 @@ test('Then it should show the fifth card description', async () => {
     </MemoryRouter>,
   );
 
-  const description = await screen.findByText(/Soy un gato Oriental/i);
+  const description = await screen.findByText(
+    /Juguetón, curioso y extrovertido. Cariñoso, leal y ruidoso. Requiere mucha atención./i,
+  );
   await expect(description).toBeInTheDocument();
 });
 
@@ -85,7 +95,9 @@ test('Then it should show the sixth card description', async () => {
     </MemoryRouter>,
   );
 
-  const description = await screen.findByText(/Soy un gato Siberiano/i);
+  const description = await screen.findByText(
+    /Independiente y tímido, pero está muy apegado a su dueño. Tranquilo pero, en cuanto puede, descarga su energía en el exterior. Es de carácter dulce y afectuoso, y resistente al frío./i,
+  );
   await expect(description).toBeInTheDocument();
 });
 describe('When the id is invalid', () => {

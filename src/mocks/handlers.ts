@@ -42,7 +42,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Azul Ruso',
+          description:
+            'Tranquilo, dócil y cariñoso. Tímido con los desconocidos. Casero, aunque a veces se escapa.Vivaz y despierto',
         }),
       );
     },
@@ -62,7 +63,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Balinés',
+          description:
+            'Viváz e inteligente. Juguetón, maullador. Fiel, no le gusta la soledad. Exigente, le gusta llamar la atención',
         }),
       );
     },
@@ -82,7 +84,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Bengalí',
+          description:
+            'Independiente, poco mimoso. Juguetón y curioso. Deportista, ágil y buen cazador.',
         }),
       );
     },
@@ -102,7 +105,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Bosque de Noruega',
+          description:
+            'Sociable pero independiente. Juguetón, curioso y audáz. Cazador hábil.',
         }),
       );
     },
@@ -122,7 +126,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Oriental',
+          description:
+            'Juguetón, curioso y extrovertido. Cariñoso, leal y ruidoso. Requiere mucha atención.',
         }),
       );
     },
@@ -142,7 +147,8 @@ export const handlers = [
           phone: '611111111',
           city: 'Sevilla',
           image: 'cat.webp',
-          description: 'Soy un gato Siberiano',
+          description:
+            'Independiente y tímido, pero está muy apegado a su dueño. Tranquilo pero, en cuanto puede, descarga su energía en el exterior. Es de carácter dulce y afectuoso, y resistente al frío.',
         }),
       );
     },
