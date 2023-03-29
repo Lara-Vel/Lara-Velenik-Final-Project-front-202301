@@ -13,16 +13,13 @@ export const getAllAds = async () => {
 };
 
 export const createNewAd = async (newAd: FormData) => {
-  const response = await fetch(
-    `${process.env.REACT_APP_API_URL}/api/v1/ads/create`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`,
-      },
-      body: newAd,
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/ads`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`,
     },
-  );
+    body: newAd,
+  });
 
   if (!response.ok) {
     throw new Error('Error datos incorrectos');
