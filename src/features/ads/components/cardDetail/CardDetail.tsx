@@ -11,7 +11,12 @@ import {
   siberianoDescription,
 } from '../../../../shared/data/description';
 import { DetailContainer } from './CardDetailStyled';
-import * as FaIcons from 'react-icons/fa';
+import {
+  FaQuoteLeft,
+  FaGlobe,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 
 interface CardDetailProps {
   adId: string;
@@ -58,7 +63,7 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
                 </div>
                 <div className="detail-info">
                   <div className="info-line">
-                    <FaIcons.FaQuoteLeft
+                    <FaQuoteLeft
                       style={{
                         color: 'royalblue',
                       }}
@@ -66,7 +71,7 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
                     <p className="name-info">{ad.name}</p>
                   </div>
                   <div className="info-line">
-                    <FaIcons.FaQuoteLeft
+                    <FaQuoteLeft
                       style={{
                         color: 'royalblue',
                       }}
@@ -74,7 +79,7 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
                     <p className="surname-info">{ad.surname}</p>
                   </div>
                   <div className="info-line">
-                    <FaIcons.FaGlobe
+                    <FaGlobe
                       style={{
                         color: 'royalblue',
                       }}
@@ -82,7 +87,7 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
                     <p className="email-info">{ad.email}</p>
                   </div>
                   <div className="info-line">
-                    <FaIcons.FaPhoneAlt
+                    <FaPhoneAlt
                       style={{
                         color: 'royalblue',
                       }}
@@ -90,7 +95,7 @@ const CardDetail: FC<CardDetailProps> = ({ adId }) => {
                     <p className="phone-info">{ad.phone}</p>
                   </div>
                   <div className="info-line">
-                    <FaIcons.FaMapMarkerAlt
+                    <FaMapMarkerAlt
                       style={{
                         color: 'royalblue',
                       }}
