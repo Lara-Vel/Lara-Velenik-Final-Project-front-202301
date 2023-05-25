@@ -7,7 +7,6 @@ export const LoginFormStyled = styled.div`
     justify-content: space-between;
     color: #7f7e84;
     font-family: var(--main-font-regular);
-    background-color: #fffcfa;
   }
 
   .title-form {
@@ -15,7 +14,7 @@ export const LoginFormStyled = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     font-family: var(--main-font-regular);
   }
 
@@ -23,7 +22,7 @@ export const LoginFormStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 50%;
+    width: 338px;
     gap: 2.5rem;
   }
 
@@ -46,19 +45,20 @@ export const LoginFormStyled = styled.div`
   }
 
   .image-form {
-    background-color: #fff7eb;
-    width: 720px;
-    height: 900px;
+    background-color: #fff1ef;
+    width: 100%;
+    height: 100vh;
   }
 
   .image-form img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    background-position: center;
   }
 
   .button-login {
-    padding: 1rem;
+    padding: 0.8rem;
     background: #627abd;
     color: white;
     font-size: 16px;
@@ -66,8 +66,18 @@ export const LoginFormStyled = styled.div`
     font-weight: 700;
     border: none;
   }
+  .link {
+    color: #989898;
+    font-size: 14px;
+    text-align: center;
+  }
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
+  .link a {
+    color: #627abd;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 992px) {
     .form {
       flex-direction: column-reverse;
       align-items: center;
@@ -75,7 +85,7 @@ export const LoginFormStyled = styled.div`
     }
 
     .login-form {
-      width: 95%;
+      width: 338px;
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -86,14 +96,15 @@ export const LoginFormStyled = styled.div`
     }
 
     .image-form {
-      width: 400px;
-      height: 310px;
+      width: 100%;
+      height: 320px;
     }
 
     .image-form img {
-      object-fit: cover;
+      object-fit: contain;
       width: 100%;
       height: 100%;
+      background-position: center;
     }
 
     .title {
@@ -109,14 +120,70 @@ export const LoginFormStyled = styled.div`
     .button-login {
       padding: 0.6rem;
     }
+    .link {
+      margin-top: 1rem;
+    }
   }
 
   .spinner {
-    color: #627abd;
+    color: #7f7e84;
     display: flex;
     align-items: center;
     gap: 8px;
     height: 60px;
+    width: 33%;
+  }
+
+  .spinner img {
+    height: 20px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .form {
+      flex-direction: column-reverse;
+      align-items: center;
+      display: flex;
+    }
+
+    .login-form {
+      width: 290px;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .title-form {
+      width: 95%;
+      padding: 2rem 0;
+    }
+
+    .image-form {
+      width: 100%;
+      height: 320px;
+    }
+
+    .image-form img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .login-form input {
+      min-width: 30px;
+      font-size: 16px;
+      padding: 7px;
+    }
+
+    .button-login {
+      padding: 0.6rem;
+    }
+    .link {
+      margin-top: 1rem;
+    }
   }
 `;
 

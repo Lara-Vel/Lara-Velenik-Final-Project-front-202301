@@ -2,7 +2,7 @@ import React, { FormEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
 import { getNewUserTokenAsync, selectAuthSlice } from '../../user-slice';
 import { ErrorStyled, LoginFormStyled, SuccesStyled } from './LoginFormStyled';
-import * as FaIcons from 'react-icons/fa';
+import { FaRegCheckCircle, FaRegTimesCircle } from 'react-icons/fa';
 import { Navigate } from 'react-router-dom';
 
 const LoginForm = () => {
@@ -15,7 +15,7 @@ const LoginForm = () => {
         return (
           <>
             <SuccesStyled>
-              Acceso correcto <FaIcons.FaRegCheckCircle />
+              Acceso correcto <FaRegCheckCircle />
             </SuccesStyled>
             <Navigate to={'/app'} />
           </>
@@ -23,7 +23,7 @@ const LoginForm = () => {
       case 'error':
         return (
           <ErrorStyled>
-            {loginMessage} <FaIcons.FaRegTimesCircle />
+            {loginMessage} <FaRegTimesCircle />
           </ErrorStyled>
         );
       default:
@@ -46,7 +46,7 @@ const LoginForm = () => {
             {status === 'loading' ? (
               <span className="spinner">
                 Cargando...
-                <FaIcons.FaSpinner />{' '}
+                <img src="/assets/images/spinner.gif" alt="animated gif" />
               </span>
             ) : (
               <>
@@ -70,6 +70,10 @@ const LoginForm = () => {
                   Acceder
                 </button>
                 {formFeedback()}
+                <p className="link">
+                  ¿No tienes una cuenta?{' '}
+                  <a href="/register">Regístrate ahora</a>
+                </p>
               </>
             )}
           </form>
