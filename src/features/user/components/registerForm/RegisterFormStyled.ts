@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoginFormStyled = styled.div`
+export const RegisterFormStyled = styled.div`
   .form {
     height: 100%;
     display: flex;
@@ -18,22 +18,23 @@ export const LoginFormStyled = styled.div`
     font-family: var(--main-font-regular);
   }
 
-  .login-form {
+  .register-form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 338px;
-    gap: 2.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
-  .login-form input {
+  .register-form input {
     min-width: 50px;
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
     border-color: #cfcaca;
   }
-  .login-form input::placeholder {
+  .register-form input::placeholder {
     color: #cfcaca;
   }
 
@@ -57,7 +58,7 @@ export const LoginFormStyled = styled.div`
     background-position: center;
   }
 
-  .button-login {
+  .button-register {
     padding: 0.8rem;
     background: #627abd;
     color: white;
@@ -65,6 +66,7 @@ export const LoginFormStyled = styled.div`
     border-radius: 5px;
     font-weight: 700;
     border: none;
+    margin-bottom: 1.5rem;
   }
   .link {
     color: #989898;
@@ -84,7 +86,7 @@ export const LoginFormStyled = styled.div`
       display: flex;
     }
 
-    .login-form {
+    .register-form {
       width: 338px;
       gap: 1rem;
       margin-top: 1rem;
@@ -111,13 +113,13 @@ export const LoginFormStyled = styled.div`
       font-size: 20px;
     }
 
-    .login-form input {
+    .register-form input {
       min-width: 30px;
       font-size: 16px;
       padding: 7px;
     }
 
-    .button-login {
+    .button-register {
       padding: 0.6rem;
     }
     .link {
@@ -145,7 +147,7 @@ export const LoginFormStyled = styled.div`
       display: flex;
     }
 
-    .login-form {
+    .register-form {
       width: 290px;
       gap: 1rem;
       margin-top: 1rem;
@@ -172,13 +174,13 @@ export const LoginFormStyled = styled.div`
       font-size: 20px;
     }
 
-    .login-form input {
+    .register-form input {
       min-width: 30px;
       font-size: 16px;
       padding: 7px;
     }
 
-    .button-login {
+    .button-register {
       padding: 0.6rem;
     }
     .link {

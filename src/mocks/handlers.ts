@@ -21,6 +21,28 @@ export const handlers = [
     },
   ),
 
+  rest.post(
+    `${process.env.REACT_APP_API_URL}/auth/register`,
+    async (req, res, ctx) => {
+      const request = await req.json();
+      const { email } = request;
+
+      if (email === 'emailtest@gmail.com') {
+        return res(
+          ctx.status(201),
+          ctx.json({
+            msg: 'Your user has been registered successfully',
+          }),
+        );
+      }
+
+      return res(
+        ctx.status(409),
+        ctx.json({ msg: 'An account already exists with this email' }),
+      );
+    },
+  ),
+
   rest.get(
     `${process.env.REACT_APP_API_URL}/api/v1/ads`,
     async (_req, res, ctx) => {

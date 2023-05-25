@@ -16,7 +16,9 @@ export const renderWithProviders = (
       userReducer: {
         status: 'idle',
         loginStatus: 'idle',
+        registerStatus: 'idle',
         loginMessage: '',
+        registerMessage: '',
       },
       adsReducer: {
         ads: [],

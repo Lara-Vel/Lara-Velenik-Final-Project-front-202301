@@ -1,29 +1,32 @@
-import React, { FormEvent } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
-import { getNewUserTokenAsync, selectAuthSlice } from '../../user-slice';
-import { ErrorStyled, LoginFormStyled, SuccesStyled } from './LoginFormStyled';
 import { FaRegCheckCircle, FaRegTimesCircle } from 'react-icons/fa';
+import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
+import { registerNewUserTokenAsync, selectAuthSlice } from '../../user-slice';
+import { ErrorStyled, SuccesStyled } from '../loginForm/LoginFormStyled';
 import { Navigate } from 'react-router-dom';
+import { FormEvent } from 'react';
+import { RegisterFormStyled } from './RegisterFormStyled';
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const dispatch = useAppDispatch();
-  const { status, loginMessage, loginStatus } = useAppSelector(selectAuthSlice);
+  const { status, registerMessage, registerStatus } =
+    useAppSelector(selectAuthSlice);
 
-  const formFeedback = () => {
-    switch (loginStatus) {
+  const registerFormFeedback = () => {
+    switch (registerStatus) {
       case 'success':
         return (
           <>
             <SuccesStyled>
-              Acceso correcto <FaRegCheckCircle />
+              Registro completado
+              <FaRegCheckCircle />
             </SuccesStyled>
-            <Navigate to={'/app'} />
+            <Navigate to={'/'} />
           </>
         );
       case 'error':
         return (
           <ErrorStyled>
-            {loginMessage} <FaRegTimesCircle />
+            {registerMessage} <FaRegTimesCircle />
           </ErrorStyled>
         );
       default:
@@ -34,15 +37,15 @@ const LoginForm = () => {
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    dispatch(getNewUserTokenAsync(event.currentTarget));
+    dispatch(registerNewUserTokenAsync(event.currentTarget));
   };
 
   return (
-    <LoginFormStyled>
+    <RegisterFormStyled>
       <div className="form">
         <div className="title-form">
-          <form onSubmit={onSubmit} className="login-form">
-            <h2 className="title">Iniciar sesión</h2>
+          <form onSubmit={onSubmit} className="register-form">
+            <h2 className="title">Registro de usuario</h2>
             {status === 'loading' ? (
               <span className="spinner">
                 Cargando...
@@ -50,6 +53,22 @@ const LoginForm = () => {
               </span>
             ) : (
               <>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nombre"
+                  name="name"
+                  required
+                  className="imput-name-form"
+                />
+                <input
+                  type="text"
+                  id="surname"
+                  placeholder="Apellido"
+                  name="surname"
+                  required
+                  className="imput-surname-form"
+                />
                 <input
                   type="email"
                   id="email"
@@ -66,13 +85,12 @@ const LoginForm = () => {
                   required
                   className="imput-password-form"
                 />
-                <button type="submit" className="button-login">
-                  Acceder
+                <button type="submit" className="button-register">
+                  Crea tu cuenta
                 </button>
-                {formFeedback()}
+                {registerFormFeedback()}
                 <p className="link">
-                  ¿No tienes una cuenta?{' '}
-                  <a href="/register">Regístrate ahora</a>
+                  ¿Ya tienes una cuenta? <a href="/">Inicia sesión</a>
                 </p>
               </>
             )}
@@ -85,8 +103,8 @@ const LoginForm = () => {
           />
         </div>
       </div>
-    </LoginFormStyled>
+    </RegisterFormStyled>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
