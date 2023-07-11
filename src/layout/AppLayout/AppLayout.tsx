@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../../shared/components/NavBar/NavBar';
 
-const MainLayout = () => {
+const AppLayout = () => {
   return (
     <div className="app-container">
       <NavBar />
@@ -12,4 +12,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default AppLayout;
