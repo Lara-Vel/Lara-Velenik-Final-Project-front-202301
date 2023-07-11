@@ -2,6 +2,8 @@
 
 The purpose of this web application is to help people with cat allergies to find hypoallergenic cats. The user can search for hypoallergenic cats through ads and create, modify, and delete ads.
 
+![Preview](public/assets/images/preview.png)
+
 Live demo: https://lara-velenik-final-project-front-23.netlify.app/app
 
 ## Installation
