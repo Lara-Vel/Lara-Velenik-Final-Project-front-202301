@@ -8,11 +8,11 @@
   height: 100vh;
   width: 100%;
   background-color: #fff7eb;
-  padding: 40px;
+  padding: 4rem;
 }
 
 .not-found-elements {
-  padding: 10px;
+  padding: 1rem;
   color: #627abd;
   font-family: var(--main-font-regular);
   font-size: 1.4rem;
@@ -22,7 +22,7 @@
   margin: 0 auto;
   text-align: center;
   display: flex;
-  width: 500px;
+  width: 50rem;
 }
 
 .not-found-image img {
@@ -30,7 +30,7 @@
 }
 
 .not-found-link {
-  padding: 10px;
+  padding: 1rem;
   color: #627abd;
   font-family: var(--main-font-regular);
   font-size: 2.5rem;
@@ -50,7 +50,7 @@
     justify-content: center;
   }
   .not-found-elements {
-    padding-top: 80px;
+    padding-top: 8rem;
     font-size: 1.1rem;
   }
 
@@ -63,7 +63,7 @@
     max-width: 100%;
   }
   .not-found-link {
-    padding: 10px;
+    padding: 1rem;
     font-size: 2rem;
     letter-spacing: 0.1em;
     line-height: 3.5rem;
