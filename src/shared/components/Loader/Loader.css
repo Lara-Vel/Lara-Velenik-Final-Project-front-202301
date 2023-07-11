@@ -7,24 +7,24 @@
   color: official;
   display: inline-block;
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -40%);
 }
 .lds-spinner div {
-  transform-origin: 40px 40px;
+  transform-origin: 4rem 4rem;
   animation: lds-spinner 1.2s linear infinite;
 }
 .lds-spinner div:after {
   content: " ";
   display: block;
   position: absolute;
-  top: 3px;
-  left: 37px;
-  width: 6px;
-  height: 18px;
+  top: 0.3rem;
+  left: 3.7rem;
+  width: 0.6rem;
+  height: 1.8rem;
   border-radius: 20%;
   background: #000000;
 }
@@ -87,8 +87,8 @@
 
 @media screen and (max-width: 426px) {
   .lds-spinner {
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     left: 50%;
     top: 25%;
     transform: translate(-50%, -25%);
