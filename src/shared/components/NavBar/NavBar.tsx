@@ -10,7 +10,6 @@ import {
   NavMenuClose,
   NavMenuToggle,
   NavMenuIcons,
-  NavContainer,
 } from './NavBarStyled';
 
 const NavBar = () => {
@@ -19,59 +18,55 @@ const NavBar = () => {
   const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
-      <NavContainer>
-        <NavMenu className="nav-menu">
-          <NavMenuLogo
-            className={sidebar ? 'nav-menu__logo active' : 'nav-menu__logo'}
+      <NavMenu className="nav-menu">
+        <NavMenuLogo
+          className={sidebar ? 'nav-menu__logo active' : 'nav-menu__logo'}
+        >
+          <img src="/assets/images/logo-home.webp" alt="Hypocat logo" />
+        </NavMenuLogo>
+        <NavMenuItems
+          className={sidebar ? 'nav-menu__items active' : 'nav-menu__items'}
+        >
+          {SidebarData.map(item => {
+            return (
+              <li key={item.title} className={item.cName}>
+                <Link to={item.path}>
+                  <span>{item.title}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </NavMenuItems>
+        <NavMenuIcons
+          data-testid="burger"
+          className="nav-menu__icons"
+          onClick={showSidebar}
+        >
+          <NavMenuToggle
+            className={sidebar ? 'nav-menu__toggle active' : 'nav-menu__toggle'}
           >
-            <img src="/assets/images/logo-home.webp" alt="Hypocat logo" />
-          </NavMenuLogo>
-          <NavMenuItems
-            className={sidebar ? 'nav-menu__items active' : 'nav-menu__items'}
+            <Link to="#" className="menu-bars">
+              <FaIcons.FaBars
+                style={{
+                  color: 'black',
+                }}
+                title="hamburguer-menu"
+              />
+            </Link>
+          </NavMenuToggle>
+          <NavMenuClose
+            className={sidebar ? 'nav-menu__close' : 'nav-menu__close active'}
           >
-            {SidebarData.map(item => {
-              return (
-                <li key={item.title} className={item.cName}>
-                  <Link to={item.path}>
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </NavMenuItems>
-          <NavMenuIcons
-            data-testid="burger"
-            className="nav-menu__icons"
-            onClick={showSidebar}
-          >
-            <NavMenuToggle
-              className={
-                sidebar ? 'nav-menu__toggle active' : 'nav-menu__toggle'
-              }
-            >
-              <Link to="#" className="menu-bars">
-                <FaIcons.FaBars
-                  style={{
-                    color: 'black',
-                  }}
-                  title="hamburguer-menu"
-                />
-              </Link>
-            </NavMenuToggle>
-            <NavMenuClose
-              className={sidebar ? 'nav-menu__close' : 'nav-menu__close active'}
-            >
-              <Link to="#" className="menu-close">
-                <AiIcons.AiOutlineClose
-                  style={{
-                    color: 'black',
-                  }}
-                />
-              </Link>
-            </NavMenuClose>
-          </NavMenuIcons>
-        </NavMenu>
-      </NavContainer>
+            <Link to="#" className="menu-close">
+              <AiIcons.AiOutlineClose
+                style={{
+                  color: 'black',
+                }}
+              />
+            </Link>
+          </NavMenuClose>
+        </NavMenuIcons>
+      </NavMenu>
     </>
   );
 };
