@@ -2,18 +2,19 @@ import styled from 'styled-components';
 
 export const ContainerCard = styled.figure`
   position: relative;
-  min-width: 285px;
-  max-width: 400px;
-  max-height: 360px;
   overflow: hidden;
-  width: 400px;
-  height: 360px;
-  border-radius: 10px;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 1rem;
   background: linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
 
   @media (max-width: 376px) {
-    width: 285px;
-    height: 285px;
+    width: 28.5rem;
+    height: 28.5rem;
+  }
+  @media (min-width: 320px) and (max-width: 375px) {
+    width: 24.5rem;
+    height: 24.5rem;
   }
 
   img {
@@ -35,7 +36,7 @@ export const ContainerCard = styled.figure`
     padding: 1.5em;
     color: #fff;
     background-color: rgba(58, 52, 42, 0.4);
-    font-size: 1.5em;
+    font-size: 2rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +47,7 @@ export const ContainerCard = styled.figure`
     font-family: var(--main-font-regular);
 
     @media (max-width: 376px) {
-      font-size: 0.9rem;
+      font-size: 1.7rem;
     }
 
     :hover {
@@ -66,17 +67,17 @@ export const ContainerCard = styled.figure`
   .textcaption {
     ::before {
       position: absolute;
-      top: 30px;
-      right: 30px;
-      left: 30px;
-      bottom: 30px;
-      border: 1px solid;
+      top: 3rem;
+      right: 3rem;
+      left: 3rem;
+      bottom: 3rem;
+      border: 0.1rem solid;
       content: '';
-      backdrop-filter: blur(10px) saturate(100%);
+      backdrop-filter: blur(1rem) saturate(100%);
     }
 
     h2 {
-      margin: 22% -36px 10px -36px;
+      margin: 25% -3.6rem 1rem -3.6rem;
       transition: transform 0.35s;
       transform: translateY(100%);
       text-align: center;
