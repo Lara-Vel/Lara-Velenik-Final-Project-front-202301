@@ -15,6 +15,7 @@ interface AuthState {
   registerStatus: AuthStatus;
   loginMessage: string;
   registerMessage: string;
+  active: boolean;
 }
 
 const initialState: AuthState = {
@@ -23,6 +24,7 @@ const initialState: AuthState = {
   registerStatus: 'idle',
   loginMessage: '',
   registerMessage: '',
+  active: false,
 };
 
 export const getNewUserTokenAsync = createAsyncThunk(
