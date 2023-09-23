@@ -43,3 +43,5 @@ We strive to keep our codebase clean, organized, and maintainable, and these too
 ##### Credits
 
 The Hypocat frontend has been developed by Lara Velenik and is distributed under the MIT license.
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Lara-Velenik-Final-Project-front-202301-mal&metric=coverage)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Lara-Velenik-Final-Project-front-202301-mal)
